@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowffers · B2B Master Product Cards Library (All 10 Categories)</title>
+  <meta name="description" content="Production-ready Master B2B Component Library featuring 28 products across all 10 workplace categories on Knowffers.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Header Banner -->
+  <header class="header-banner">
+    <div class="container">
+      <div class="header-content">
+        <div>
+          <div class="brand-badge">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            Knowffers B2B Ecommerce & Wholesale Supplies
+          </div>
+          <h1 class="header-title">Master Workplace <span>Product Cards</span></h1>
+          <p class="header-subtitle">Comprehensive B2B cards system with 28 products across all 10 workplace categories with live search & volume tier pricing in ₹ (INR).</p>
+        </div>
+
+        <div class="toolbar">
+          <button id="themeToggleBtn" class="btn-tool">
+            Theme Switch
+          </button>
+          <div style="width: 1px; height: 24px; background: rgba(255,255,255,0.15);"></div>
+          <button id="viewGridBtn" class="btn-tool active">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            Grid
+          </button>
+          <button id="viewListBtn" class="btn-tool">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            List
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Search & Filter Header -->
+    <div class="filter-bar">
+      <div class="search-box">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="catalogSearchInput" class="search-input" placeholder="Search 28 products by title, SKU, brand (e.g. Kangaro, HP 88A, Nescafe, VoltSync)...">
+      </div>
+
+      <div class="filter-actions">
+        <label class="filter-checkbox-label">
+          <input type="checkbox" id="inStockOnlyCheckbox">
+          In Stock Only
+        </label>
+      </div>
+    </div>
+
+    <!-- MAIN MARKETPLACE LAYOUT (SIDEBAR + PRODUCT GRID) -->
+    <div class="marketplace-layout">
+
+      <!-- LEFT SIDEBAR: 10 WORKPLACE CATEGORIES -->
+      <aside class="cat-sidebar">
+        <div class="sidebar-title">Workplace Categories</div>
+        <ul class="cat-list">
+          <li>
+            <button class="cat-item-btn active" data-category-filter="all" data-cat-name="All Workplace Products">
+              <span>🏢 All Categories</span>
+              <span class="cat-count-badge">28</span>
+            </button>
+          </li>
+          <li>
+            <button class="cat-item-btn" data-category-filter="stationery" data-cat-name="Stationery">
+              <span>📝 Stationery</span>
+              <span class="cat-count-badge">5</span>
+            </button>
+          </li>
+          <li>
+            <button class="cat-item-btn" data-category-filter="printing" data-cat-name="Printer & Printing Supplies">
+              <span>🖨️ Printer & Supplies</span>
+              <span class="cat-count-badge">3</span>
+            </button>
+          </li>
+          <li>
+            <button class="cat-item-btn" data-category-filter="pantry" data-cat-name="Pantry & Beverages">
+              <span>☕ Pantry & Beverages</span>
+              <span class="cat-count-badge">3</span>
+            </button>
+          </li>
+          <li>
+            <button class="cat-item-btn" data-category-filter="cleaning" data-cat-name="Cleaning & Hygiene">
+              <span>🧹 Cleaning & Hygiene</span>
+              <span class="cat-count-badge">3</span>
+            </button>
+          </li>
+          <li>
+            <button class="cat-item-btn" data-category-filter="packaging" data-cat-name="Packaging Materials">
+              <span>📦 Packaging Materials</span>
+              <span class="cat-count-badge">3</span>
+            </button>
+          </li>
+          <li>
+            <button class="cat-item-btn" data-category-filter="it" data-cat-name="Computer & IT Consumables">
+              <span>💻 Computer & IT</span>
+              <span class="cat-count-badge">3</span>
+            </button>
+          </li>
+          <li>
+            <button class="cat-item-btn" data-category-filter="furniture" data-cat-name="Office Furniture">
+              <span>🪑 Office Furniture</span>
+              <span class="cat-count-badge">2</span>
+            </button>
+          </li>
+          <li>
+            <button class="cat-item-btn" data-category-filter="electrical" data-cat-name="Electrical Supplies">
+              <span>⚡ Electrical Supplies</span>
+              <span class="cat-count-badge">3</span>
+            </button>
+          </li>
+          <li>
+            <button class="cat-item-btn" data-category-filter="safety" data-cat-name="Safety & Facility Supplies">
+              <span>🦺 Safety & Facility</span>
+              <span class="cat-count-badge">4</span>
+            </button>
+          </li>
+          <li>
+            <button class="cat-item-btn" data-category-filter="business" data-cat-name="Other Business Essentials">
+              <span>🏢 Other Business</span>
+              <span class="cat-count-badge">3</span>
+            </button>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- RIGHT PRODUCT DISPLAY AREA -->
+      <section>
+        <div class="section-header">
+          <h2 id="activeCatHeader" class="section-title">All Workplace Products</h2>
+          <span id="activeCatCount" class="section-subtitle">Showing 28 Workplace Items</span>
+        </div>
+
+        <div id="masterCardsContainer" class="cards-grid">
+
+          <!-- ==================== CATEGORY 1: STATIONERY (5 ITEMS) ==================== -->
+
+          <!-- 1. JK Copier Paper -->
+          <article class="kf-card" data-category="stationery">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=600&q=80" alt="JK Copier Paper A4" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-moq">MOQ: 2 Cartons</span>
+                <span class="kf-badge kf-badge-discount">23% OFF</span>
+                <span class="kf-badge kf-badge-gst">✓ GST Invoice</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Stationery / Paper</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">JK Paper · 4.9 ★</span>
+                <span class="kf-rating">✓ Verified</span>
+              </div>
+              <h3 class="kf-product-title">JK Copier Paper A4 75 GSM (Carton of 5 Reams / 2500 Sheets)</h3>
+              <p class="kf-product-desc">High-brightness 75 GSM multipurpose office copier paper. Acid-free elemental chlorine-free, jam-free laser performance.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">STAT-JK-A4-75GSM</span>
+                <span class="kf-pack-size">Pack: carton</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹1,350</span>
+                  <span class="kf-price-unit">/ carton</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('JK Copier Paper A4', 2, 'carton', '₹2,700')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Heavy Duty Desk Stapler -->
+          <article class="kf-card" data-category="stationery">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80" alt="Kangaro Heavy Duty Stapler" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-moq">MOQ: 2 Set</span>
+                <span class="kf-badge kf-badge-discount">22% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Stationery / Staplers</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">Kangaro · 4.8 ★</span>
+                <span class="kf-rating">✓ Verified</span>
+              </div>
+              <h3 class="kf-product-title">Heavy Duty Desk Stapler (Kangaro 24/6) with 5 Staple Pin Boxes</h3>
+              <p class="kf-product-desc">All-metal commercial desk stapler with rotating anvil. Capacity up to 30 sheets.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">STAT-STAPLE-HD-K24</span>
+                <span class="kf-pack-size">Pack: set</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹380</span>
+                  <span class="kf-price-unit">/ set</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Kangaro Heavy Duty Stapler', 2, 'set', '₹760')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Hardbound Accounts Ledger Register -->
+          <article class="kf-card" data-category="stationery">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1544716278-e513176f20b5?auto=format&fit=crop&w=600&q=80" alt="Accounts Ledger Register" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount">26% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Stationery / Notebooks</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">Classmate B2B · 4.8 ★</span>
+              </div>
+              <h3 class="kf-product-title">Hardbound Accounts Ledger Register (Pack of 4, 300 Pages Each)</h3>
+              <p class="kf-product-desc">Heavy-duty ledger book with sewn-spine cloth hard binding and numbered ruled 70 GSM pages.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">STAT-REG-ACC-300P</span>
+                <span class="kf-pack-size">Pack: pack</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹680</span>
+                  <span class="kf-price-unit">/ pack</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Hardbound Ledger Register', 1, 'pack', '₹680')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Executive Ballpoint Pen Box -->
+          <article class="kf-card" data-category="stationery">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1585336261026-61e778929b0f?auto=format&fit=crop&w=600&q=80" alt="Reynolds Pen Box" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-moq">MOQ: 2 Box</span>
+                <span class="kf-badge kf-badge-discount">24% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Stationery / Pens</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">Reynolds · 4.9 ★</span>
+              </div>
+              <h3 class="kf-product-title">Executive Ballpoint & Gel Pen Assorted Box (Pack of 50)</h3>
+              <p class="kf-product-desc">Smooth 0.7mm quick-drying ballpoint pens with rubberized non-slip grip. Smudge-resistant.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">STAT-PEN-BOX-50</span>
+                <span class="kf-pack-size">Pack: box</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹420</span>
+                  <span class="kf-price-unit">/ box</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Reynolds Pen Box of 50', 2, 'box', '₹840')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Cello Pen Pack of 10 -->
+          <article class="kf-card" data-category="stationery">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=600&q=80" alt="Cello Pen" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount" style="background: #dc2626;">33% OFF</span>
+                <span class="kf-badge" style="background: #ea580c; color: white;">Only 5 left</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Stationery / Pens</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">Cello · 4.7 ★</span>
+              </div>
+              <h3 class="kf-product-title">Cello Fine Grip Pen Set (Pack of 10)</h3>
+              <p class="kf-product-desc">Nice pen to use and have good quality with smooth ink flow.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">STAT-CELLO-10P</span>
+                <span class="kf-pack-size">Pack: 10</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹100</span>
+                  <span class="kf-price-unit">/ 10</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Cello Pen 10 Pack', 1, 'pack', '₹100')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- ==================== CATEGORY 2: PRINTER & PRINTING SUPPLIES (3 ITEMS) ==================== -->
+
+          <!-- 6. Direct Thermal Barcode Labels -->
+          <article class="kf-card" data-category="printing">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="Thermal Barcode Labels" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-moq">MOQ: 4 Roll</span>
+                <span class="kf-badge kf-badge-discount">31% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Printer Supplies / Labels</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">ThermalPack · 4.8 ★</span>
+              </div>
+              <h3 class="kf-product-title">Direct Thermal Barcode Shipping Labels 4x6 Inch (Roll of 500)</h3>
+              <p class="kf-product-desc">Self-adhesive perforated commercial grade direct thermal shipping labels. Smudge-proof.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">PRINT-LBL-4X6-500</span>
+                <span class="kf-pack-size">Pack: roll</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹290</span>
+                  <span class="kf-price-unit">/ roll</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Thermal Barcode Labels 4x6', 4, 'roll', '₹1,160')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. HP LaserJet 88A Toner -->
+          <article class="kf-card" data-category="printing">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1612815150336-997c58874404?auto=format&fit=crop&w=600&q=80" alt="HP Toner Cartridge" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount">41% OFF</span>
+                <span class="kf-badge kf-badge-gold">Best Value</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Printer Supplies / Toner</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">HP Compatible Pro · 4.9 ★</span>
+              </div>
+              <h3 class="kf-product-title">HP LaserJet 88A (CC388A) High-Yield Black Toner Cartridge</h3>
+              <p class="kf-product-desc">Monochrome toner cartridge delivering crisp, dark text. Yields up to 1,600 pages.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">PRINT-TONER-HP88A</span>
+                <span class="kf-pack-size">Pack: pcs</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹850</span>
+                  <span class="kf-price-unit">/ pcs</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('HP LaserJet 88A Toner', 1, 'pcs', '₹850')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. Canon GI-790 Ink Combo -->
+          <article class="kf-card" data-category="printing">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=600&q=80" alt="Canon Ink Combo" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount">22% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Printer Supplies / Ink</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">Canon · 4.9 ★</span>
+              </div>
+              <h3 class="kf-product-title">Canon GI-790 High Capacity Ink Bottle Combo (CMYK 4-Pack)</h3>
+              <p class="kf-product-desc">Original high-yield ink bottles for Canon MegaTank systems. Clean spill-free refill.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">PRINT-INK-GI790-4PK</span>
+                <span class="kf-pack-size">Pack: set</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹1,950</span>
+                  <span class="kf-price-unit">/ set</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Canon GI-790 Ink Combo', 1, 'set', '₹1,950')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- ==================== CATEGORY 3: PANTRY & BEVERAGES (3 ITEMS) ==================== -->
+
+          <!-- 9. Nescafe Classic Coffee Tin -->
+          <article class="kf-card" data-category="pantry">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?auto=format&fit=crop&w=600&q=80" alt="Nescafe Coffee Tin" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount">18% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Pantry / Coffee</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">Nescafe · 4.9 ★</span>
+              </div>
+              <h3 class="kf-product-title">Nescafe Classic Instant Coffee Commercial Dispenser Tin (500g)</h3>
+              <p class="kf-product-desc">100% pure roasted robusta coffee granules giving a signature bold taste for office pantries.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">PAN-COF-NES500G</span>
+                <span class="kf-pack-size">Pack: tin</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹1,150</span>
+                  <span class="kf-price-unit">/ tin</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Nescafe Coffee Tin 500g', 1, 'tin', '₹1,150')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10. Ripple Wall Insulated Cups -->
+          <article class="kf-card" data-category="pantry">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Paper Beverage Cups" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-moq">MOQ: 2 Pack</span>
+                <span class="kf-badge kf-badge-discount">27% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Pantry / Cups</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">EcoSip B2B · 4.8 ★</span>
+              </div>
+              <h3 class="kf-product-title">Ripple Wall Insulated Kraft Paper Beverage Cups 250ml (Pack of 250)</h3>
+              <p class="kf-product-desc">Triple-layer ripple insulated paper cups. Keeps tea/coffee hot while cool to touch.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">PAN-CUP-RIP-250ML</span>
+                <span class="kf-pack-size">Pack: pack</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹690</span>
+                  <span class="kf-price-unit">/ pack</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Ripple Wall Paper Cups', 2, 'pack', '₹1,380')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 11. Taj Garden Assam Tea Box -->
+          <article class="kf-card" data-category="pantry">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80" alt="Assam Tea Box" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-moq">MOQ: 2 Box</span>
+                <span class="kf-badge kf-badge-discount">26% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Pantry / Tea</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">Taj Garden B2B · 4.8 ★</span>
+              </div>
+              <h3 class="kf-product-title">Premium Assam CTC Tea Bulk Dispenser Box (200 Envelope Bags)</h3>
+              <p class="kf-product-desc">Rich golden liquor CTC blend sourced from top Assam gardens. Foil-sealed envelope tea bags.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">PAN-TEA-ASSAM-200PK</span>
+                <span class="kf-pack-size">Pack: box</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹520</span>
+                  <span class="kf-price-unit">/ box</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Premium Assam Tea Box', 2, 'box', '₹1,040')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- ==================== CATEGORY 4: CLEANING & HYGIENE (3 ITEMS) ==================== -->
+
+          <!-- 12. Floor Cleaner Citrus 5L -->
+          <article class="kf-card" data-category="cleaning">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?auto=format&fit=crop&w=600&q=80" alt="Disinfectant Floor Cleaner" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-moq">MOQ: 2 Canister</span>
+                <span class="kf-badge kf-badge-discount">36% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Cleaning / Floor Cleaning</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">SparklePro Commercial · 4.8 ★</span>
+              </div>
+              <h3 class="kf-product-title">Commercial Heavy-Duty Disinfectant Floor Cleaner Citrus (5L Canister)</h3>
+              <p class="kf-product-desc">Concentrated pine and citrus formulation killing 99.9% bacteria on marble and tiles.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">CLN-FLR-CITRUS-5L</span>
+                <span class="kf-pack-size">Pack: canister</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹480</span>
+                  <span class="kf-price-unit">/ canister</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Disinfectant Floor Cleaner 5L', 2, 'canister', '₹960')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 13. Bio Garbage Bags Black -->
+          <article class="kf-card" data-category="cleaning">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&w=600&q=80" alt="Garbage Bags" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-moq">MOQ: 2 Pack</span>
+                <span class="kf-badge kf-badge-discount">28% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Cleaning / Garbage Bags</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">CleanEarth · 4.7 ★</span>
+              </div>
+              <h3 class="kf-product-title">Heavy Duty Bio-Degradable Garbage Bags Black (30x37 Inch, Pack of 150)</h3>
+              <p class="kf-product-desc">Tear-resistant leakproof gusseted bin liners for office floor cans up to 60L.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">CLN-GBAG-30X37-150</span>
+                <span class="kf-pack-size">Pack: pack</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹490</span>
+                  <span class="kf-price-unit">/ pack</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Bio Garbage Bags Pack of 150', 2, 'pack', '₹980')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 14. Antibacterial Hand Wash 5L -->
+          <article class="kf-card" data-category="cleaning">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1600857062241-98e5dba7f214?auto=format&fit=crop&w=600&q=80" alt="Foaming Hand Wash" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount">31% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Cleaning / Hand Wash</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">PureGlow B2B · 4.8 ★</span>
+              </div>
+              <h3 class="kf-product-title">Antibacterial Foaming Hand Wash Bulk Refill (5 Liters)</h3>
+              <p class="kf-product-desc">Moisturizing formula enriched with Aloe Vera for high-traffic office washrooms.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">CLN-HWASH-FOAM-5L</span>
+                <span class="kf-pack-size">Pack: canister</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹590</span>
+                  <span class="kf-price-unit">/ canister</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Foaming Hand Wash 5L', 1, 'canister', '₹590')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- ==================== CATEGORY 5: PACKAGING MATERIALS (3 ITEMS) ==================== -->
+
+          <!-- 15. BOPP Sealing Tape 12 Rolls -->
+          <article class="kf-card" data-category="packaging">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" alt="Sealing Tape Rolls" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-moq">MOQ: 2 Pack</span>
+                <span class="kf-badge kf-badge-discount">31% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Packaging / Tape</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">WonderTape · 4.9 ★</span>
+              </div>
+              <h3 class="kf-product-title">BOPP Transparent Sealing Tape 65m (Pack of 12 Rolls)</h3>
+              <p class="kf-product-desc">48mm wide heavy-duty pressure sensitive tape. Strong adhesion on corrugated boxes.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">PKG-TAPE-CLR-12PK</span>
+                <span class="kf-pack-size">Pack: pack</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹540</span>
+                  <span class="kf-price-unit">/ pack</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('BOPP Sealing Tape Pack of 12', 2, 'pack', '₹1,080')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 16. 3-Ply Corrugated Cartons Bundle of 50 -->
+          <article class="kf-card" data-category="packaging">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=600&q=80" alt="Shipping Cartons" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount">24% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Packaging / Cartons</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">PackShield · 4.8 ★</span>
+              </div>
+              <h3 class="kf-product-title">3-Ply Corrugated Shipping Cartons 12x10x8 Inch (Bundle of 50)</h3>
+              <p class="kf-product-desc">High burst-factor brown kraft corrugated boxes designed for e-commerce dispatch.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">PKG-BOX-3PLY-50PK</span>
+                <span class="kf-pack-size">Pack: bundle</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹1,250</span>
+                  <span class="kf-price-unit">/ bundle</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('3-Ply Corrugated Cartons Bundle of 50', 1, 'bundle', '₹1,250')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 17. Air Bubble Wrap Roll -->
+          <article class="kf-card" data-category="packaging">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1595246140625-573b715d11dc?auto=format&fit=crop&w=600&q=80" alt="Bubble Wrap Roll" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount">26% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Packaging / Bubble Wrap</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">PackShield · 4.8 ★</span>
+              </div>
+              <h3 class="kf-product-title">Industrial Air Bubble Cushioning Wrap Roll (100m x 1m Width)</h3>
+              <p class="kf-product-desc">10mm bubble diameter dual-layer virgin polyethylene protective packaging roll.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">PKG-BUB-100MX1M</span>
+                <span class="kf-pack-size">Pack: roll</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹890</span>
+                  <span class="kf-price-unit">/ roll</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Air Bubble Wrap Roll 100m', 1, 'roll', '₹890')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- ==================== CATEGORY 6: COMPUTER & IT CONSUMABLES (3 ITEMS) ==================== -->
+
+          <!-- 18. Braided 4K HDMI Cable Pack of 5 -->
+          <article class="kf-card" data-category="it">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80" alt="HDMI Cable Pack" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount">33% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Computer & IT / Cables</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">VoltSync IT · 4.9 ★</span>
+              </div>
+              <h3 class="kf-product-title">Braided 4K/60Hz High-Speed HDMI 2.0 Cable 3M (Pack of 5)</h3>
+              <p class="kf-product-desc">Gold-plated connectors with nylon braided jacket supporting 18 Gbps bandwidth.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">IT-HDMI-4K-3M-5PK</span>
+                <span class="kf-pack-size">Pack: pack</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹1,100</span>
+                  <span class="kf-price-unit">/ pack</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Braided 4K HDMI Cables Pack of 5', 1, 'pack', '₹1,100')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 19. Wireless Ergonomic Mouse Pack of 5 -->
+          <article class="kf-card" data-category="it">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=600&q=80" alt="Wireless Mouse Pack" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount">34% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Computer & IT / Mouse</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">LogiTech Compatible · 4.8 ★</span>
+              </div>
+              <h3 class="kf-product-title">Wireless Optical Ergonomic Mouse with Nano Receiver (Pack of 5)</h3>
+              <p class="kf-product-desc">1600 DPI optical tracking with power-saving auto sleep mode for office workstations.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">IT-MSE-WRLS-5PK</span>
+                <span class="kf-pack-size">Pack: pack</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹1,650</span>
+                  <span class="kf-price-unit">/ pack</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Wireless Mouse Pack of 5', 1, 'pack', '₹1,650')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 20. Duracell Pro AA Batteries Box of 40 -->
+          <article class="kf-card" data-category="it">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1619725002198-6a689b72f41d?auto=format&fit=crop&w=600&q=80" alt="AA Alkaline Batteries" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount">26% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Computer & IT / Batteries</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">Duracell Pro · 4.9 ★</span>
+              </div>
+              <h3 class="kf-product-title">Commercial AA Alkaline Batteries Bulk Box (Pack of 40)</h3>
+              <p class="kf-product-desc">Long-lasting 1.5V leak-resistant alkaline cells for wireless keyboards and mice.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">IT-BAT-AA-40PK</span>
+                <span class="kf-pack-size">Pack: box</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹890</span>
+                  <span class="kf-price-unit">/ box</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Duracell AA Batteries Box of 40', 1, 'box', '₹890')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- ==================== CATEGORY 7: OFFICE FURNITURE (2 ITEMS) ==================== -->
+
+          <!-- 21. Ergonomic Mesh Executive Office Chair -->
+          <article class="kf-card" data-category="furniture">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1580481072645-022f9a6d83d0?auto=format&fit=crop&w=600&q=80" alt="Ergonomic Mesh Chair" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount">28% OFF</span>
+                <span class="kf-badge kf-badge-gold">BIFMA Certified</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Office Furniture / Chairs</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">ErgoComfort · 4.9 ★</span>
+              </div>
+              <h3 class="kf-product-title">Ergonomic High-Back Mesh Executive Office Chair</h3>
+              <p class="kf-product-desc">Breathable mesh back, adjustable lumbar support, 3D padded armrests, class-4 gas lift.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">FURN-CHR-EXEC-MSH</span>
+                <span class="kf-pack-size">Pack: pcs</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹6,499</span>
+                  <span class="kf-price-unit">/ pcs</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Ergonomic Mesh Chair', 1, 'pcs', '₹6,499')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 22. Magnetic Dry Erase Whiteboard 4x3 Ft -->
+          <article class="kf-card" data-category="furniture">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80" alt="Whiteboard 4x3 Ft" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount">29% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Office Furniture / Whiteboards</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">ClearBoard · 4.8 ★</span>
+              </div>
+              <h3 class="kf-product-title">Magnetic Dry Erase Whiteboard with Aluminum Frame (4x3 Feet)</h3>
+              <p class="kf-product-desc">Non-ghosting ceramic coated surface. Anodized aluminum frame with marker tray.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">FURN-WB-MAG-4X3FT</span>
+                <span class="kf-pack-size">Pack: pcs</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹1,850</span>
+                  <span class="kf-price-unit">/ pcs</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Magnetic Whiteboard 4x3 Ft', 1, 'pcs', '₹1,850')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- ==================== CATEGORY 8: ELECTRICAL & GENERAL SUPPLIES (3 ITEMS) ==================== -->
+
+          <!-- 23. 6-Socket Surge Protector -->
+          <article class="kf-card" data-category="electrical">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80" alt="Surge Protector Spike Guard" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-moq">MOQ: 2 Pcs</span>
+                <span class="kf-badge kf-badge-discount">32% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Electrical / Surge Protectors</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">VoltSync · 4.8 ★</span>
+              </div>
+              <h3 class="kf-product-title">Heavy-Duty 6-Socket Surge Protector Spike Guard with 3m Cord</h3>
+              <p class="kf-product-desc">Master switch spike strip with thermal overload circuit breaker and EMI noise filter.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">ELEC-SPK-6SKT-3M</span>
+                <span class="kf-pack-size">Pack: pcs</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹580</span>
+                  <span class="kf-price-unit">/ pcs</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('6-Socket Surge Protector', 2, 'pcs', '₹1,160')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 24. Cordless Impact Drill 20V Kit -->
+          <article class="kf-card" data-category="electrical">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=600&q=80" alt="Impact Drill Kit" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount">26% OFF</span>
+                <span class="kf-badge kf-badge-gold">Heavy Duty</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Electrical / Maintenance Tools</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">VoltSync Tools · 4.9 ★</span>
+              </div>
+              <h3 class="kf-product-title">Heavy Duty Cordless Impact Drill 20V Kit with 2 Batteries</h3>
+              <p class="kf-product-desc">Brushless drill driver with 25+3 clutch settings, 2-speed gearbox, and hard carry case.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">ELEC-DRIL-20V-KIT</span>
+                <span class="kf-pack-size">Pack: set</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹4,600</span>
+                  <span class="kf-price-unit">/ set</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Cordless Impact Drill 20V Kit', 1, 'set', '₹4,600')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 25. Philips 12W LED Bulbs Pack of 10 -->
+          <article class="kf-card" data-category="electrical">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1550985616-10810253b84d?auto=format&fit=crop&w=600&q=80" alt="LED Bulbs Pack" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount">36% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Electrical / LED Bulbs</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">Philips Commercial · 4.9 ★</span>
+              </div>
+              <h3 class="kf-product-title">12W Energy Saving Cool Daylight LED Bulbs (Pack of 10)</h3>
+              <p class="kf-product-desc">B22 base energy-efficient LED bulbs offering 1200 lumens output with 25,000h rated life.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">ELEC-LED-12W-10PK</span>
+                <span class="kf-pack-size">Pack: pack</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹890</span>
+                  <span class="kf-price-unit">/ pack</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Philips 12W LED Bulbs Pack of 10', 1, 'pack', '₹890')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- ==================== CATEGORY 9: SAFETY & FACILITY SUPPLIES (4 ITEMS) ==================== -->
+
+          <!-- 26. Polycarbonate Safety Glasses (OUT OF STOCK SOLD OUT CARD) -->
+          <article class="kf-card sold-out" data-category="safety">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80" alt="Safety Glasses" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-soldout">Sold Out</span>
+                <span class="kf-badge kf-badge-discount">30% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Safety / Protective Gear</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">SafeShield · 4.8 ★</span>
+              </div>
+              <h3 class="kf-product-title">Anti-Scratch Clear Polycarbonate Safety Glasses (Pack of 12)</h3>
+              <p class="kf-product-desc">Wrap-around protective goggles with UV400 filtration and anti-fog side shields.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">SAF-GLS-CLR-12PK</span>
+                <span class="kf-pack-size">Pack: pack</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹840</span>
+                  <span class="kf-price-unit">/ pack</span>
+                </div>
+              </div>
+              <div class="kf-stock-container">
+                <div class="kf-stock-header">
+                  <span class="kf-stock-status soldout">❌ Out of Stock</span>
+                  <span style="color: var(--text-muted);">Restocking Soon</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Notify Stock</button>
+                <button class="kf-btn kf-btn-disabled" disabled>Out of Stock</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 27. ABC Fire Extinguisher 4KG -->
+          <article class="kf-card" data-category="safety">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1599586120429-48281b6f0eca?auto=format&fit=crop&w=600&q=80" alt="Fire Extinguisher" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount">31% OFF</span>
+                <span class="kf-badge kf-badge-gold">ISI Certified</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Safety / Fire Extinguishers</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">FlameGuard · 4.9 ★</span>
+              </div>
+              <h3 class="kf-product-title">ABC Dry Powder Commercial Fire Extinguisher 4KG (ISI Certified)</h3>
+              <p class="kf-product-desc">Multipurpose stored pressure powder fire extinguisher for Class A, B, and C fires.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">SAF-EXT-ABC-4KG</span>
+                <span class="kf-pack-size">Pack: pcs</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹1,450</span>
+                  <span class="kf-price-unit">/ pcs</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('ABC Fire Extinguisher 4KG', 1, 'pcs', '₹1,450')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 28. First Aid Box Kit (50 Person) -->
+          <article class="kf-card" data-category="safety">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde?auto=format&fit=crop&w=600&q=80" alt="First Aid Kit" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount">29% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Safety / First Aid</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">SafeShield · 4.9 ★</span>
+              </div>
+              <h3 class="kf-product-title">Commercial Workplace First Aid Box Kit (50-Person Compliant)</h3>
+              <p class="kf-product-desc">Wall-mountable metal cabinet stocked with sterile gauze, bandages, and CPR mask.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">SAF-FAID-50PERS</span>
+                <span class="kf-pack-size">Pack: kit</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹1,250</span>
+                  <span class="kf-price-unit">/ kit</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('First Aid Kit 50-Person', 1, 'kit', '₹1,250')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 29. Safety Helmet Pack of 5 -->
+          <article class="kf-card" data-category="safety">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=600&q=80" alt="Industrial Safety Helmet" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount">31% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Safety / Helmets</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">SafeShield · 4.8 ★</span>
+              </div>
+              <h3 class="kf-product-title">Industrial High-Density Safety Helmet with Ratchet (Pack of 5)</h3>
+              <p class="kf-product-desc">ANSI certified HDPE safety hard hat with adjustable 6-point suspension ratchet.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">SAF-HLM-HDPE-5PK</span>
+                <span class="kf-pack-size">Pack: pack</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹1,350</span>
+                  <span class="kf-price-unit">/ pack</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Safety Helmet Pack of 5', 1, 'pack', '₹1,350')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- ==================== CATEGORY 10: OTHER BUSINESS ESSENTIALS (3 ITEMS) ==================== -->
+
+          <!-- 30. Cross-Cut Office Paper Shredder -->
+          <article class="kf-card" data-category="business">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80" alt="Paper Shredder" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount">25% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Business / Shredders</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">Calculox · 4.8 ★</span>
+              </div>
+              <h3 class="kf-product-title">Cross-Cut Commercial Office Paper Shredder P-4 (15L Bin)</h3>
+              <p class="kf-product-desc">Shreds up to 10 sheets per pass into 4x38mm confetti particles. Shreds staples and cards.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">BIZ-SHRD-A4-15L</span>
+                <span class="kf-pack-size">Pack: pcs</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹3,600</span>
+                  <span class="kf-price-unit">/ pcs</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Paper Shredder 15L', 1, 'pcs', '₹3,600')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 31. Self-Inking Date Stamp -->
+          <article class="kf-card" data-category="business">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=600&q=80" alt="Self Inking Stamp" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount">29% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Business / Rubber Stamps</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">Trodat Pro · 4.9 ★</span>
+              </div>
+              <h3 class="kf-product-title">Self-Inking Heavy Duty Date & Custom Received Rubber Stamp</h3>
+              <p class="kf-product-desc">Dual-color red and blue ink pad with rotatable date band running through 2035.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">BIZ-STMP-DATE-SEAL</span>
+                <span class="kf-pack-size">Pack: pcs</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹490</span>
+                  <span class="kf-price-unit">/ pcs</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('Self-Inking Rubber Stamp', 1, 'pcs', '₹490')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 32. Thermal Laminating Machine A4 -->
+          <article class="kf-card" data-category="business">
+            <div class="kf-card-media">
+              <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80" alt="Thermal Laminator" class="kf-card-img" loading="lazy">
+              <div class="kf-badge-group">
+                <span class="kf-badge kf-badge-discount">29% OFF</span>
+              </div>
+              <div class="kf-quick-actions">
+                <button class="kf-btn-icon kf-wishlist-btn" title="Save to Watchlist">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="kf-card-body">
+              <div class="kf-category-tag">Business / Laminating</div>
+              <div class="kf-vendor-info">
+                <span class="kf-vendor-name">Calculox · 4.8 ★</span>
+              </div>
+              <h3 class="kf-product-title">A4 Hot & Cold Document Thermal Laminating Machine</h3>
+              <p class="kf-product-desc">Dual roller rapid heating laminator with 2-minute warmup. Includes 20 pouch sheets.</p>
+              <div class="kf-sku-pack">
+                <span class="kf-sku">BIZ-LAM-A4-PRO</span>
+                <span class="kf-pack-size">Pack: pcs</span>
+              </div>
+              <div class="kf-price-tier-box">
+                <div class="kf-price-main">
+                  <span class="kf-price-amount">₹1,950</span>
+                  <span class="kf-price-unit">/ pcs</span>
+                </div>
+              </div>
+              <div class="kf-card-footer">
+                <button class="kf-btn kf-btn-secondary" data-action="open-rfq">Request RFQ</button>
+                <button class="kf-btn kf-btn-primary" onclick="handleAddToCart('A4 Laminating Machine', 1, 'pcs', '₹1,950')">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- RFQ MODAL DIALOG -->
+  <div id="rfqModalBackdrop" class="kf-modal-backdrop">
+    <div class="kf-modal">
+      <button id="rfqModalClose" class="kf-modal-close">&times;</button>
+      <h3 class="kf-modal-title">Request Wholesale Quotation</h3>
+      <p class="kf-modal-subtitle">Direct RFQ inquiry for: <strong id="rfqProductTitle" style="color: var(--kf-navy-primary);">Product</strong></p>
+
+      <form id="rfqForm">
+        <div class="kf-form-group">
+          <label class="kf-form-label">Target Quantity Required</label>
+          <input type="number" class="kf-form-input" placeholder="e.g. 50 units" required>
+        </div>
+        <div class="kf-form-group">
+          <label class="kf-form-label">Company Name & GSTIN Number</label>
+          <input type="text" class="kf-form-input" placeholder="e.g. 07AAAAA0000A1Z5" required>
+        </div>
+        <div class="kf-form-group">
+          <label class="kf-form-label">Business Email / Phone Number</label>
+          <input type="text" class="kf-form-input" placeholder="procurement@company.in / +91 9876543210" required>
+        </div>
+        <div class="kf-form-group">
+          <label class="kf-form-label">Delivery Pincode & City</label>
+          <input type="text" class="kf-form-input" placeholder="e.g. 110001, New Delhi">
+        </div>
+        <div class="kf-form-group">
+          <label class="kf-form-label">Custom Specifications / Message</label>
+          <textarea class="kf-form-textarea" rows="3" placeholder="Specify logo printing, custom packaging, or target lead time..."></textarea>
+        </div>
+        <button type="submit" class="kf-btn kf-btn-primary" style="width: 100%; height: 44px; font-size: 14px;">Submit RFQ to Supplier</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
