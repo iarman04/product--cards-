@@ -1,0 +1,228 @@
+/* Standalone Responsive CSS for Knowffers ProductCard React Component */
+
+.kf-react-card {
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--kf-card-bg, #ffffff);
+  border: 1px solid var(--kf-card-border, #e2e8f0);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+}
+
+.kf-react-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08);
+}
+
+.kf-react-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  background: #f1f5f9;
+  overflow: hidden;
+}
+
+.kf-react-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.kf-react-card:hover .kf-react-card-img {
+  transform: scale(1.05);
+}
+
+.kf-react-badges {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 2;
+}
+
+.kf-react-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  backdrop-filter: blur(8px);
+}
+
+.kf-react-badge-moq {
+  background: rgba(15, 23, 42, 0.85);
+  color: #ffffff;
+}
+
+.kf-react-badge-discount {
+  background: rgba(225, 29, 72, 0.9);
+  color: #ffffff;
+}
+
+.kf-react-badge-gst {
+  background: rgba(37, 99, 235, 0.9);
+  color: #ffffff;
+}
+
+.kf-react-badge-urgent {
+  background: rgba(220, 38, 38, 0.9);
+  color: #ffffff;
+}
+
+.kf-react-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+}
+
+.kf-react-wishlist-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f172a;
+  transition: all 0.2s ease;
+}
+
+.kf-react-wishlist-btn:hover {
+  transform: scale(1.1);
+  color: #e11d48;
+}
+
+.kf-react-wishlist-btn.saved {
+  color: #e11d48;
+  fill: #e11d48;
+}
+
+.kf-react-card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.kf-react-category {
+  font-size: 10px;
+  font-weight: 700;
+  color: #1e3a8a;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.kf-react-vendor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.kf-react-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.kf-react-price-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+}
+
+.kf-react-price-amount {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #1e3a8a;
+}
+
+.kf-react-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px dashed #e2e8f0;
+  text-align: center;
+}
+
+.kf-react-tier-qty {
+  font-size: 9px;
+  color: #64748b;
+}
+
+.kf-react-tier-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.kf-react-footer {
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.kf-react-btn {
+  height: 42px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  flex: 1;
+  min-height: 42px;
+}
+
+.kf-react-btn-sec {
+  background: #f1f5f9;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+}
+
+.kf-react-btn-sec:hover {
+  background: #e2e8f0;
+}
+
+.kf-react-btn-pri {
+  background: #1e3a8a;
+  color: #ffffff;
+}
+
+.kf-react-btn-pri:hover {
+  background: #1d4ed8;
+}
+
+.kf-react-btn-disabled {
+  background: #f1f5f9;
+  color: #94a3b8;
+  cursor: not-allowed;
+  border: 1px solid #e2e8f0;
+}
